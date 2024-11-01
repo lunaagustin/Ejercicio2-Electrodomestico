@@ -6,8 +6,8 @@ export class Lavarropa extends Electrodomestico {
     private tipoCarga: string;
 
 
-    constructor(capacidad: number, consumoElectrico: string, tipoCarga: string) {
-        super();
+    constructor(capacidad: number, consumoElectrico: string, tipoCarga: string,marca:string,modelo:string,codigo:number,color:string) {
+        super(marca,modelo,codigo,color);
         this.capacidad = capacidad;
         this.consumoElectrico = consumoElectrico;
         this.tipoCarga = tipoCarga;
@@ -68,6 +68,12 @@ export class Lavarropa extends Electrodomestico {
     public apagar(): void {
         super.apagar();
         console.log("Lavarropa apagado.");
+    }
+
+    public actualizar(): void {
+        super.actualizar();
+        console.log("Actualizando lavarropa");
+        
     }
 
 }
